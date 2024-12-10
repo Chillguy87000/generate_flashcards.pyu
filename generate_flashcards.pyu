@@ -1,0 +1,74 @@
+# Script pour générer un fichier de flashcards pour Anki
+def generate_anki_flashcards(output_file):
+    # Liste des questions et réponses
+    flashcards = [
+        ("Qu'est-ce que la rationalisation du travail dans les années 1980 ?", 
+         "Une réflexion pour intensifier le travail des ouvriers en renforçant le pouvoir hiérarchique et en individualisant les salaires."),
+        ("Quelle méthode a été introduite dans les usines automobiles dans les années 1980 pour améliorer le rendement ?", 
+         "L'autocontrôle sur les chaînes de production."),
+        ("Quels effets la mécanisation a-t-elle sur le travail ouvrier ?", 
+         "Intensification du travail, danger accru, et création de nouveaux types d'accidents."),
+        ("Quel est le principal secteur où travaillent 83 % des ouvriers ?", 
+         "La logistique."),
+        ("Selon Vincent De Gaulejac, que critique-t-il dans l'organisation moderne du travail ?", 
+         "L'absurdité des contraintes gestionnaires et leur éloignement des objectifs réels du travail."),
+        ("Quelle est la différence entre le travail prescrit et le travail réel ?", 
+         "Le travail prescrit est conçu sans consulter les ouvriers, tandis que le travail réel reflète la réalité des tâches effectuées."),
+        ("Quelle innovation architecturale symbolise le contrôle hiérarchique permanent dans les usines ?", 
+         "Le Panoptique."),
+        ("Quels sont les points communs entre ouvriers et salariés selon le document ?", 
+         "Subordination, exposition au chômage, revenus faibles, et conditions de vie similaires."),
+        ("Comment la mécanisation a-t-elle changé les métiers dans le secteur pétrochimique ?", 
+         "Création de métiers de maintenance pour surveiller les machines et les processus."),
+        ("Quelle est la conséquence psychologique des évaluations quantitatives sur les ouvriers ?", 
+         "Pression psychologique et mal-être lié à l'obsession des résultats."),
+        ("Pourquoi les primes ont-elles été qualifiées de 'magiques' dans certains métiers ?", 
+         "Parce qu'elles favorisent l'individualisation des salaires, surtout dans un contexte de chômage élevé."),
+        ("Quelle conséquence a la commande vocale sur les travailleurs dans la logistique ?", 
+         "Perte d'autonomie et contrôle permanent grâce à la géolocalisation."),
+        ("Quelle tension existe entre les objectifs quantitatifs et les objectifs des salariés ?", 
+         "Opposition entre objectifs à court terme imposés par la gestion et objectifs à long terme des salariés, comme la maintenance."),
+        ("Quelle est l'impact des innovations organisationnelles sur la pénibilité du travail ?", 
+         "Elles augmentent la pénibilité en alourdissant les contraintes liées aux machines et au contrôle hiérarchique."),
+        ("Quel concept philosophique est lié au Panoptique de Jeremy Bentham dans le monde du travail ?", 
+         "L'idée de contrôle permanent et invisible pour induire un comportement discipliné."),
+        ("Pourquoi la polyvalence est-elle utilisée dans les fast-foods comme McDonald's ?", 
+         "Pour maximiser la productivité en faisant effectuer toutes les tâches à chaque employé sous un contrôle hiérarchique strict."),
+        ("Quels sont les effets des activités contrariées ou empêchées sur les salariés ?", 
+         "Un mal-être psychologique et une baisse de l'estime de soi."),
+        ("Qu'est-ce que l'ouvriarisation des tâches dans le secteur tertiaire ?", 
+         "L'introduction de formes de contrôle hiérarchique et de processus gestionnaires similaires à l'industrie."),
+        ("Quelles inégalités augmentent depuis 40 ans dans les classes populaires ?", 
+         "Les inégalités économiques et culturelles liées à la patrimonialisation de la société."),
+        ("Selon Schwartz, qu'est-ce qui caractérise les classes populaires ?", 
+         "Une expérience de domination économique et culturelle, des modes de vie communs, et une vision spécifique du monde."),
+        ("Quel pourcentage des ouvriers déclaraient être soumis à un contrôle hiérarchique permanent en 1984 ?", 
+         "25 %."),
+        ("Quel était le pourcentage des ouvriers soumis au contrôle hiérarchique permanent à la fin des années 1990 ?", 
+         "43 %."),
+        ("Quelle est la conséquence de l'individualisation des salaires sur les négociations collectives ?", 
+         "Elle court-circule les négociations collectives des salaires."),
+        ("Pourquoi les ouvriers dans la logistique portent-ils souvent plus d'une tonne par jour ?", 
+         "En raison de la mécanisation et des contraintes liées à l'optimisation des processus."),
+        ("Quelle est la part des hommes parmi les ouvriers et des femmes parmi les salariés ?", 
+         "80 % des ouvriers sont des hommes et 80 % des salariés sont des femmes."),
+        ("Pourquoi les travailleurs ressentent-ils une hausse de la responsabilité dans leur travail ?", 
+         "En raison de la responsabilisation accrue et de la réduction des sanctions directes."),
+        ("Qu'est-ce que les 'activités empêchées' et leur impact sur les salariés ?", 
+         "Des tâches qui ne peuvent pas être accomplies pleinement, ce qui cause un mal-être et affecte l'estime de soi."),
+        ("Qu'est-ce que la 'tertiairisation du monde ouvrier' ?", 
+         "Le fait qu'une grande partie des ouvriers travaillent désormais dans des secteurs du tertiaire, comme la logistique."),
+        ("Comment les classes populaires sont-elles définies aujourd'hui selon le document ?", 
+         "Comme des groupes dominés économiquement et culturellement, avec des pratiques et des visions spécifiques.")
+    ]
+
+    # Écrire les questions et réponses dans le fichier au format Anki
+    with open(output_file, 'w', encoding='utf-8') as file:
+        for question, answer in flashcards:
+            file.write(f"{question}\t{answer}\n")
+
+    print(f"Fichier {output_file} généré avec succès.")
+
+
+# Génération du fichier
+generate_anki_flashcards('anki_flashcards.txt')
